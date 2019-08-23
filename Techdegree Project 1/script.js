@@ -38,18 +38,19 @@ console.log(getRandomQuote());
 function printQuote() {
   var html = ''
   var quote = getRandomQuote();
-  html += '<p class="quote">' + quotes['quote'] + '</p>';
-  html += '<p class="source">' + quotes['source'];
+  html += '<p class="quote">' + quote['quote'] + '</p>';
+  html += '<p class="source">' + quote['source'];
   if(quote.citation) {
-    html += '<span class="citation">' + quotes['citation'] + '</span>';
+    html += '<span class="citation">' + quote['citation'] + '</span>';
   }
   if(quote.year) {
-    html += '<span class="year">' + quotes['year'] + '</span>';
+    html += '<span class="year">' + quote['year'] + '</span>';
   }
   html += '</p>';
+  return html;
 }
 
-console.log(html);
+console.log(printQuote());
 
 function print(html) {
   var quoteBoxDiv = document.getElementById('quote-box');
