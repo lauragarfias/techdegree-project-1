@@ -7,17 +7,17 @@ project 1 - A Random Quote Generator
 
 //Array of quotes with source, citation & year if available
 var quotes = [
-  {quote: '"An arrow can only be shot by pulling it backward. When life is dragging you back with difficulties, it means it’s going to launch you into something great. So just focus, and keep aiming."', 
+  {quote: 'An arrow can only be shot by pulling it backward. When life is dragging you back with difficulties, it means it’s going to launch you into something great. So just focus, and keep aiming.', 
     source: 'Anonymous'},
-  {quote: '"May the Force by with you"', 
+  {quote: 'May the Force by with you', 
     source: 'Han Solo', 
     citation: 'Star Wars', 
     year: '1977'},
-  {quote: '"The greatest wealth is to live content with little."', 
+  {quote: 'The greatest wealth is to live content with little.', 
     source: 'Plato'},
-  {quote: '"It does not matter how slowly you go so long as you do not stop."', 
+  {quote: 'It does not matter how slowly you go so long as you do not stop.', 
     source: 'Confucius'},
-  {quote: '"Love means never having to say you\'re sorry"', 
+  {quote: 'Love means never having to say you\'re sorry', 
   source: "Ryan O'Neal", 
   citation: 'Love Story', 
   year: '1970'}
@@ -52,9 +52,11 @@ function printQuote() {
 
 console.log(printQuote());
 
-function print(html) {
+function print() {
   var quoteBoxDiv = document.getElementById('quote-box');
-  quoteBoxDiv.innerHTML = html;
+  quoteBoxDiv.innerHTML = printQuote();
 }
+
+console.log(print());
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
