@@ -47,16 +47,12 @@ function printQuote() {
     html += '<span class="year">' + quote['year'] + '</span>';
   }
   html += '</p>';
-  return html;
+  function print() {
+    var quoteBoxDiv = document.getElementById('quote-box');
+    quoteBoxDiv.innerHTML = html;
+  }
+
+  return print();
 }
-
-console.log(printQuote());
-
-function print() {
-  var quoteBoxDiv = document.getElementById('quote-box');
-  quoteBoxDiv.innerHTML = printQuote();
-}
-
-console.log(print());
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
