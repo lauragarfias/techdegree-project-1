@@ -54,5 +54,5 @@ function printQuote() {
 
   return print();
 }
-
+//return a new quote when button is clicked
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
